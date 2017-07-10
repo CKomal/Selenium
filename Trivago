@@ -1,0 +1,22 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class Assignment {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		System.setProperty("webdriver.chrome.driver", "C:\\Program Files\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("http://www.trivago.co.in");
+		driver.findElement(By.xpath("//input[@type='search']")).click();
+		driver.findElement(By.xpath("//input[@type='search']")).sendKeys("Pune");
+	//	driver.findElement(By.linkText(linkText))
+		driver.findElement(By.xpath("//span[@class='horus-btn-search__label']")).click();
+		//driver.findElement(By.xpath("//time[@class='btn-horus__value js-btn-calendar-value']")).click();
+	}
+
+}
